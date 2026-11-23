@@ -1,0 +1,71 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "absolut-radio",
+  "title": "Absolut Radio",
+  "description": "Browse Absolut Radio stations, listen to live radio, and see the current track.",
+  "icon": "absolut-radio-symbol.png",
+  "author": "zeekrey",
+  "platforms": [
+    "macOS"
+  ],
+  "categories": [
+    "Media"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "browse-stations",
+      "title": "Browse Stations",
+      "subtitle": "Absolut Radio",
+      "description": "Browse all Absolut Radio stations and online streams in a searchable grid.",
+      "mode": "view"
+    },
+    {
+      "name": "play",
+      "title": "Play",
+      "subtitle": "Absolut Radio",
+      "description": "Play the last station you listened to, or Absolut Hot on first use.",
+      "mode": "no-view"
+    },
+    {
+      "name": "pause",
+      "title": "Pause",
+      "subtitle": "Absolut Radio",
+      "description": "Stop live playback without forgetting the last station.",
+      "mode": "no-view"
+    },
+    {
+      "name": "current-track",
+      "title": "Current Track",
+      "subtitle": "Absolut Radio",
+      "description": "Show the current live track from the last played station.",
+      "mode": "no-view"
+    }
+  ],
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@raycast/api": "^2.12.0",
+    "react": "^19.2.0"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.8"
+    }
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.0.4",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.6.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}
